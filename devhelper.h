@@ -127,6 +127,7 @@ void git_switch_branch(void);
 void git_list_branches(void);
 void git_status(void);
 void git_log(void);
+void git_manage_remotes(void);
 
 // Weather Functions (weather.c)
 void weather_menu(void);

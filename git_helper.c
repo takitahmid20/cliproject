@@ -242,12 +242,55 @@ void git_stage_commit(void) {
  */
 void git_push(void) {
     char branch[100];
-    char command[256];
+    char remote_url[512];
+    char command[1024];
     
     print_header("Push to Remote");
     printf("\n");
     
+    // Check if remote 'origin' exists
+    if (system("git remote get-url origin > /dev/null 2>&1") != 0) {
+        print_warning("No remote repository configured!");
+        printf("\n");
+        
+        if (confirm_action("Would you like to add a remote repository now?")) {
+            printf("\n");
+            get_user_input(remote_url, sizeof(remote_url), 
+                          "Enter remote repository URL (e.g., https://github.com/user/repo.git): ");
+            
+            if (strlen(remote_url) == 0) {
+                print_error("Remote URL cannot be empty!");
+                pause_screen();
+                return;
+            }
+            
+            // Add remote origin
+            snprintf(command, sizeof(command), "git remote add origin %s", remote_url);
+            
+            printf("\n%sAdding remote repository...%s\n", COLOR_CYAN, COLOR_RESET);
+            
+            if (system(command) != 0) {
+                print_error("Failed to add remote repository!");
+                pause_screen();
+                return;
+            }
+            
+            print_success("Remote repository added successfully!");
+        } else {
+            print_info("Cannot push without a remote repository.");
+            pause_screen();
+            return;
+        }
+    } else {
+        // Show current remote
+        printf("%sCurrent remote:%s\n", COLOR_CYAN, COLOR_RESET);
+        system("git remote get-url origin");
+    }
+    
+    printf("\n");
+    
     // Show current branch
+    printf("%sCurrent branch:%s ", COLOR_CYAN, COLOR_RESET);
     system("git branch --show-current");
     
     printf("\n");
@@ -256,16 +299,36 @@ void git_push(void) {
     printf("\n%sPushing changes...%s\n", COLOR_CYAN, COLOR_RESET);
     
     if (strlen(branch) > 0) {
-        snprintf(command, sizeof(command), "git push origin %s", branch);
+        snprintf(command, sizeof(command), "git push -u origin %s", branch);
     } else {
-        snprintf(command, sizeof(command), "git push");
+        snprintf(command, sizeof(command), "git push -u origin");
     }
     
     if (system(command) == 0) {
         print_success("Changes pushed successfully!");
     } else {
         print_error("Failed to push changes!");
-        print_info("Tip: Make sure you have set up a remote and have push permissions");
+        print_warning("Common reasons:");
+        printf("  • Authentication required (check credentials)\n");
+        printf("  • No commits to push\n");
+        printf("  • Branch doesn't exist on remote\n");
+        printf("  • No push permissions\n");
+        
+        if (confirm_action("\nWould you like to try force push? (Use with caution!)")) {
+            if (strlen(branch) > 0) {
+                snprintf(command, sizeof(command), "git push -u origin %s --force", branch);
+            } else {
+                snprintf(command, sizeof(command), "git push -u origin --force");
+            }
+            
+            printf("\n%sForce pushing...%s\n", COLOR_CYAN, COLOR_RESET);
+            
+            if (system(command) == 0) {
+                print_success("Force push successful!");
+            } else {
+                print_error("Force push also failed!");
+            }
+        }
     }
     
     pause_screen();
@@ -396,6 +459,184 @@ void git_log(void) {
 }
 
 /**
+ * Manage remote repositories
+ */
+void git_manage_remotes(void) {
+    int choice;
+    char remote_name[100];
+    char remote_url[512];
+    char command[1024];
+    bool back = false;
+    
+    while (!back) {
+        clear_screen();
+        print_header("Remote Repository Management");
+        printf("\n");
+        
+        printf("%sCurrent remotes:%s\n", COLOR_CYAN, COLOR_RESET);
+        if (system("git remote -v") != 0) {
+            printf("  (No remotes configured)\n");
+        }
+        
+        printf("\n");
+        print_separator();
+        printf("\n");
+        printf("  %s1.%s Add Remote Repository\n", COLOR_CYAN, COLOR_RESET);
+        printf("  %s2.%s Remove Remote Repository\n", COLOR_CYAN, COLOR_RESET);
+        printf("  %s3.%s Change Remote URL\n", COLOR_CYAN, COLOR_RESET);
+        printf("  %s4.%s Show Remote Details\n", COLOR_CYAN, COLOR_RESET);
+        printf("  %s0.%s Back\n", COLOR_RED, COLOR_RESET);
+        printf("\n");
+        print_separator();
+        
+        choice = get_user_choice(0, 4);
+        
+        switch (choice) {
+            case 1:
+                clear_screen();
+                print_header("Add Remote Repository");
+                printf("\n");
+                
+                get_user_input(remote_name, sizeof(remote_name), 
+                              "Enter remote name (default: origin): ");
+                
+                if (strlen(remote_name) == 0) {
+                    strcpy(remote_name, "origin");
+                }
+                
+                printf("\n");
+                get_user_input(remote_url, sizeof(remote_url), 
+                              "Enter remote URL: ");
+                
+                if (strlen(remote_url) == 0) {
+                    print_error("Remote URL cannot be empty!");
+                    pause_screen();
+                    break;
+                }
+                
+                snprintf(command, sizeof(command), "git remote add %s %s", 
+                        remote_name, remote_url);
+                
+                printf("\n%sAdding remote...%s\n", COLOR_CYAN, COLOR_RESET);
+                
+                if (system(command) == 0) {
+                    print_success("Remote added successfully!");
+                } else {
+                    print_error("Failed to add remote!");
+                    print_info("The remote may already exist. Try changing it instead.");
+                }
+                
+                pause_screen();
+                break;
+            
+            case 2:
+                clear_screen();
+                print_header("Remove Remote Repository");
+                printf("\n");
+                
+                printf("%sCurrent remotes:%s\n", COLOR_CYAN, COLOR_RESET);
+                system("git remote -v");
+                
+                printf("\n");
+                get_user_input(remote_name, sizeof(remote_name), 
+                              "Enter remote name to remove: ");
+                
+                if (strlen(remote_name) == 0) {
+                    print_error("Remote name cannot be empty!");
+                    pause_screen();
+                    break;
+                }
+                
+                if (!confirm_action("Are you sure you want to remove this remote?")) {
+                    print_info("Cancelled.");
+                    pause_screen();
+                    break;
+                }
+                
+                snprintf(command, sizeof(command), "git remote remove %s", remote_name);
+                
+                printf("\n%sRemoving remote...%s\n", COLOR_CYAN, COLOR_RESET);
+                
+                if (system(command) == 0) {
+                    print_success("Remote removed successfully!");
+                } else {
+                    print_error("Failed to remove remote!");
+                }
+                
+                pause_screen();
+                break;
+            
+            case 3:
+                clear_screen();
+                print_header("Change Remote URL");
+                printf("\n");
+                
+                printf("%sCurrent remotes:%s\n", COLOR_CYAN, COLOR_RESET);
+                system("git remote -v");
+                
+                printf("\n");
+                get_user_input(remote_name, sizeof(remote_name), 
+                              "Enter remote name (default: origin): ");
+                
+                if (strlen(remote_name) == 0) {
+                    strcpy(remote_name, "origin");
+                }
+                
+                printf("\n");
+                get_user_input(remote_url, sizeof(remote_url), 
+                              "Enter new remote URL: ");
+                
+                if (strlen(remote_url) == 0) {
+                    print_error("Remote URL cannot be empty!");
+                    pause_screen();
+                    break;
+                }
+                
+                snprintf(command, sizeof(command), "git remote set-url %s %s", 
+                        remote_name, remote_url);
+                
+                printf("\n%sUpdating remote URL...%s\n", COLOR_CYAN, COLOR_RESET);
+                
+                if (system(command) == 0) {
+                    print_success("Remote URL updated successfully!");
+                } else {
+                    print_error("Failed to update remote URL!");
+                }
+                
+                pause_screen();
+                break;
+            
+            case 4:
+                clear_screen();
+                print_header("Remote Details");
+                printf("\n");
+                
+                printf("%sAll remotes:%s\n", COLOR_CYAN, COLOR_RESET);
+                system("git remote -v");
+                
+                printf("\n");
+                get_user_input(remote_name, sizeof(remote_name), 
+                              "Enter remote name for details (or press Enter to skip): ");
+                
+                if (strlen(remote_name) > 0) {
+                    printf("\n%sDetails for '%s':%s\n", COLOR_CYAN, remote_name, COLOR_RESET);
+                    snprintf(command, sizeof(command), "git remote show %s", remote_name);
+                    system(command);
+                }
+                
+                printf("\n");
+                print_separator();
+                pause_screen();
+                break;
+            
+            case 0:
+                back = true;
+                break;
+        }
+    }
+}
+
+/**
  * Branch management menu
  */
 void git_branch_menu(void) {
@@ -454,12 +695,13 @@ void git_helper_menu(void) {
         printf("  %s6.%s  Push to Remote\n", COLOR_CYAN, COLOR_RESET);
         printf("  %s7.%s  Pull from Remote\n", COLOR_CYAN, COLOR_RESET);
         printf("  %s8.%s  Branch Management\n", COLOR_CYAN, COLOR_RESET);
-        printf("  %s9.%s  View Commit Log\n", COLOR_CYAN, COLOR_RESET);
+        printf("  %s9.%s  Remote Repository Management\n", COLOR_GREEN, COLOR_RESET);
+        printf("  %s10.%s View Commit Log\n", COLOR_CYAN, COLOR_RESET);
         printf("  %s0.%s  Back to Main Menu\n", COLOR_RED, COLOR_RESET);
         printf("\n");
         print_separator();
         
-        choice = get_user_choice(0, 9);
+        choice = get_user_choice(0, 10);
         
         switch (choice) {
             case 1:
@@ -494,6 +736,9 @@ void git_helper_menu(void) {
                 git_branch_menu();
                 break;
             case 9:
+                git_manage_remotes();
+                break;
+            case 10:
                 clear_screen();
                 git_log();
                 break;
