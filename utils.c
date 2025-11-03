@@ -6,10 +6,30 @@
 
 #include "devhelper.h"
 
+#ifdef _WIN32
+/**
+ * Enable ANSI color codes on Windows 10+
+ */
+static void enable_windows_ansi_colors(void) {
+    static bool initialized = false;
+    if (!initialized) {
+        HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+        DWORD dwMode = 0;
+        GetConsoleMode(hOut, &dwMode);
+        dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+        SetConsoleMode(hOut, dwMode);
+        initialized = true;
+    }
+}
+#endif
+
 /**
  * Clear the terminal screen
  */
 void clear_screen(void) {
+    #ifdef _WIN32
+        enable_windows_ansi_colors();
+    #endif
     system(CLEAR_SCREEN);
 }
 
@@ -18,10 +38,13 @@ void clear_screen(void) {
  */
 void pause_screen(void) {
     printf("\n%sPress Enter to continue...%s", COLOR_YELLOW, COLOR_RESET);
-    getchar();
-    // Clear any remaining input
+    fflush(stdout);
+    
+    // Clear input buffer and wait for Enter
     int c;
-    while ((c = getchar()) != '\n' && c != EOF);
+    while ((c = getchar()) != '\n' && c != EOF) {
+        // Consume any pending input
+    }
 }
 
 /**
