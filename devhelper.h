@@ -30,8 +30,11 @@
 // Constants
 #define MAX_INPUT_LENGTH 512
 #define MAX_PATH_LENGTH 1024
-#define MAX_RESPONSE_SIZE 65536
+#define MAX_RESPONSE_SIZE 262144
 #define UCAM_PORTAL_URL "https://ucam.uiu.ac.bd/"
+#define UCAM_LOGIN_URL "https://ucam.uiu.ac.bd/Security/LogIn.aspx"
+#define UCAM_HOME_URL "https://ucam.uiu.ac.bd/Security/StudentHome.aspx"
+#define UCAM_RESULT_URL "https://ucam.uiu.ac.bd/Student/StudentCourseHistory.aspx?mmi=40545a1642555b514e63"
 #define WEATHER_API_URL "https://api.openweathermap.org/data/2.5/weather"
 
 // Color codes for terminal output

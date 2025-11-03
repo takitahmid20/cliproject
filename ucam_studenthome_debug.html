@@ -1,0 +1,1308 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><title>
+	
+    Student Home
+
+</title>
+        <link rel="shortcut icon" href="/Images/favicon.ico" />
+    
+    <script type="text/javascript" src="../JavaScript/jquery-1.7.1.js"></script>    
+    <link href="../ContentCSS/CSS/SiteMaster.CSS" rel="stylesheet" />
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-62803724-1', 'auto');
+        ga('send', 'pageview');
+
+   </script>
+    
+    <style type="text/css">
+
+    </style>
+    
+    <link href="../ContentCSS/CSS/ChildSiteMaster.CSS" rel="stylesheet" />
+
+
+
+
+    
+
+    <style type="text/css">
+        
+        .badge{
+                white-space: normal !important;
+        }
+
+        .style3 {
+            width: 202px;
+            height: 28px;
+        }
+
+        .Main-Hotline-container {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: 6px #ffa500 solid;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+       .pay-btn {
+            margin-top:5px
+        }
+
+        @media (max-width: 767px) {
+            .bill-text {
+                text-align: center !important;
+            }
+
+            .bill {
+                text-align: center !important;
+            }
+
+            #ctl00_MainContainer_lblMessage1 p {
+               text-align: left !important;
+               margin-left:0 !important
+            }
+
+            .nav li {
+                width:100%;
+            }
+            #ctl00_menuMain {
+            width: 100% !important;
+        }
+        }
+
+        
+
+        .level1, .level2, level3 {
+            width:100% !important;
+        }
+
+
+        .highcharts-figure, .highcharts-data-table table {
+    min-width: 320px; 
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+input[type="number"] {
+	min-width: 50px;
+}
+
+
+.tbs>li {
+    float: right !important;
+    margin-bottom: -1px !important;
+}
+
+.tbs > li a:hover {
+    box-shadow: none !important;
+    transition: none !important;
+    background:#eee !important;
+    color:blue !important;
+}
+
+    .highcharts-credits {
+        display:none
+    }
+
+.tbs > li a:active{
+    box-shadow: none !important;
+    transition: none !important;
+    background:white!important;
+}
+
+
+
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 360px; 
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+
+ ::-moz-scrollbar {
+    width: 12px;
+}
+::-moz-scrollbar-track {
+    -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+::-moz-scrollbar-thumb {
+    border-radius: 10px;
+    -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+
+
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 3px 0px 3px 0px !important;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid 
+    #ddd;
+}
+
+
+
+
+
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+    </style>
+    <script type="text/javascript" src="../Bootstrap/js/highcharts.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/exporting.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/export-data.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/accessibility.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+  function GetColumnArray(list, col, col2) {
+            var colarray = [];
+            for (var i in list) {
+                if (col2) {
+                    colarray.push(list[i][col] + " (" + list[i][col2] + ")");
+                } else {
+                    colarray.push(list[i][col]);
+                }
+            }
+            return colarray;
+        }
+
+
+
+
+
+        $(document).ready(function () {
+            var roll = $('#ctl00_lbtnUserName')[0].innerText;
+            $.ajax({
+                type: "POST",
+                url: "StudentHome.aspx/GetStudentResultSummary",
+                data: "{roll: '" + roll + "'}",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (r) {
+                    var dd2 = r.d;
+                    dd2 = dd2.reverse();
+                    Highcharts.chart('academicresult_std', {
+                        chart: {
+                            type: 'line'
+                        },
+                        title: {
+                            text: ''
+                        },
+                        subtitle: {
+                            text: ''
+                        },
+                        xAxis: {
+                            categories: GetColumnArray(dd2, 'TypeName', 'Year') // ['Fall 2017', 'Spring 2018', 'Summer 2018', 'Fall 2018']
+                        },
+                        yAxis: {
+                            title: {
+                                text: ''
+                            },
+                            visible: false,
+                            startOnTick: false,
+                            endOnTick: false
+                        },
+                        legend: {
+                            enabled: true
+                        },
+                        credits: {
+                            enabled: false,
+                            text: ''
+                        },
+                        plotOptions: {
+                            line: {
+                                dataLabels: {
+                                    enabled: true
+                                },
+                                enableMouseTracking: true
+                            }
+                        },
+                        series: [{
+                            name: 'CGPA',
+                            data: GetColumnArray(dd2, 'TranscriptCGPA')
+                        }, {
+                            name: 'GPA',
+                            data: GetColumnArray(dd2, 'GPA')
+                        }]
+                    });
+                },
+                failure: function (r) {
+                    console.log(r.d);
+                },
+                error: function (r) {
+                    console.log(r.d);
+                }
+            });
+            $.ajax({
+                type: "POST",
+                url: "StudentHome.aspx/GetStudentAttendanceSummary",
+                data: "{roll: '" + roll + "'}",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (r) {
+
+                    var dd = r.d;
+                    var cat = GetColumnArray(dd, 'FormalCode', 'SectionName');
+                    var present = GetColumnArray(dd, 'PresentCount');
+                    var absent = GetColumnArray(dd, 'AbsentCount');
+                    var remaining = GetColumnArray(dd, 'RemainClass');
+                    Highcharts.chart("attendancesummary_std", {
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: ''
+                        },
+                        xAxis: {
+                            categories: cat // ['Course A', 'Course B', 'Course C', 'Course D']
+                        },
+                        yAxis: {
+                            title: {
+                                text: ''
+                            },
+                            visible: false,
+                            startOnTick: false,
+                            endOnTick: false
+                        },
+                        legend: {
+                            enabled: true
+                        },
+                        credits: {
+                            enabled: false,
+                            text: ''
+                        },
+                        tooltip: {
+                            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+                            shared: true
+                        },
+                        plotOptions: {
+                            column: {
+                                stacking: 'percent'
+                            }
+                        },
+                        series: [{
+                            name: 'Remaining',
+                            data: remaining,
+                            dataLabels: {
+                                enabled: true,
+                                color: 'blue',
+                                align: 'center',
+                                format: '{point.y}', // one decimal
+                                y: 0 // 10 pixels down from the top
+                            }
+                        }, {
+                            name: 'Absent',
+                            data: absent, // [2, 2, 3, 2],
+                            dataLabels: {
+                                enabled: true,
+                                color: 'red',
+                                align: 'center',
+                                format: '{point.y}', // one decimal
+                                y: 0 // 10 pixels down from the top
+                            }
+                        }, {
+                            name: 'Present',
+                            data: present, // [5, 3, 4, 7],
+                            dataLabels: {
+                                enabled: true,
+                                color: 'green',
+                                align: 'center',
+                                format: '{point.y}', // one decimal
+                                y: 10 // 10 pixels down from the top
+                            }
+                        }]
+                    });
+
+                },
+                failure: function (r) {
+                    console.log(r.d);
+                },
+                error: function (r) {
+                    console.log(r.d);
+                }
+            });
+
+
+
+            //setTimeout(function () {
+            //    $.ajax({
+            //        type: "POST",
+            //        url: "StudentHome.aspx/GetStudentAdvisorInfo",
+            //        data: "{roll: '" + roll + "'}",
+            //        contentType: "application/json",
+            //        dataType: "json",
+            //        success: function (r) {
+            //            var adlist = r.d;
+            //            var advisorlist = [];
+            //            for (var i = 0; i < adlist.length; i++) {
+            //                var RN = {
+            //                    AdvisorName: adlist[i].AdvisorName,
+            //                    AdvisorInitial: adlist[i].AdvisorInitial,
+            //                    RoomNo: adlist[i].RoomNo,
+            //                    TelephoneNoOfficial: adlist[i].TelephoneNoOfficial,
+            //                    OfficialEmailAddress: adlist[i].OfficialEmailAddress
+            //                };
+            //                advisorlist.push(RN);
+            //            }
+
+            //            $('#advisor').children().remove();
+            //            var advisor = '';
+            //            for (var i = 0; i < advisorlist.length; i++) {
+            //                advisor += ' <div class="row">'
+            //                    + '     <div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Advisor Name</div></div>'
+            //                    + '     <div class="col-md-6"><span class="h5 badge badge-light">' + advisorlist[i].AdvisorName + '</span></div>'
+            //                    + ' </div>'
+            //                    + ' <div class="row">'
+            //                    + '<div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Advisor Initial</div></div>'
+            //                    + '<div class="col-md-6"><span class="h5 badge badge-light">' + advisorlist[i].AdvisorInitial + '</span></div>'
+            //                    + '</div>'
+            //                    + ' <div class="row">'
+            //                    + '     <div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Room No</div></div>'
+            //                    + '      <div class="col-md-6"><span class="h5 badge badge-light">' + advisorlist[i].RoomNo + '</span></div>'
+            //                    + '  </div>'
+            //                    + ' <div class="row">'
+            //                    + '<div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Email Address</div></div>'
+            //                    + ' <div class="col-md-6"><span class="h5 badge badge-light">' + advisorlist[i].OfficialEmailAddress + '</span></div>'
+            //                    + '</div>'
+            //                    + '   <div class="row">'
+            //                    + '      <div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Contact Number</div></div>'
+            //                    + '      <div class="col-md-6"><span class="h5 badge badge-light">' + advisorlist[i].TelephoneNoOfficial + '</span></div>'
+            //                    + '   </div>';
+            //            }
+            //            $('#advisor').append(advisor);
+            //        },
+            //        failure: function (r) {
+            //            console.log(r.d);
+            //        },
+            //        error: function (r) {
+            //            console.log(r.d);
+            //        }
+            //    });
+            //}, 1000); // 1-second delay
+
+
+
+
+
+            var program = $('#ctl00_MainContainer_hdnProgramId').val();
+            var programName = $('#ctl00_MainContainer_hdnProgramId').text();
+            
+            $.ajax({
+                type: "POST",
+                url: "StudentHome.aspx/GetNotice",
+                data: "{'program':'" + program + " ','roll':'" + roll + "'}",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (r) {
+                    
+                    //console.log(api);
+                    if(r.d != ''){
+                        var api = JSON.parse(r.d);
+                    }
+                    else{
+                        var api = [];
+                    }
+
+                    var noticeList = [];
+
+
+                    for (var i = 0; i < api.length; i++) {
+
+                        var RN = {
+                            Type: api[i].Type,
+                            WithdrawDate: api[i].WithdrawDate,
+                            Program: api[i].Program,
+                            PostedDate: api[i].PostedDate,
+                            PostedBy: api[i].PostedBy,
+                            NoticeTitle: api[i].NoticeTitle,
+                            NoticeDescription: api[i].NoticeDescription,
+                            FilePath: api[i].FilePath,
+                            CreatedDate: api[i].CreatedDate,
+                            NoticeId : api[i].NoticeId
+
+
+                        };
+
+
+
+                        noticeList.push(RN);
+                    }
+
+                    
+
+
+                    for (var i = 0; i < noticeList.length; i++) {
+
+                        var value = noticeList[i].PostedDate;
+                        var Posted_Date1 = value.slice(0, 10);
+                       
+                        var Posted_Date = Posted_Date1.split('-')[2] + '-' + Posted_Date1.split('-')[1] + '-' + Posted_Date1.split('-')[0];
+
+
+
+
+                        var typeElement = "";
+                        
+
+                        if (noticeList[i].Type == 'Other') {
+                           
+
+                            typeElement += '<h3  style="margin: 7px 0 7px 0; font-size: 18px;width: 62%;display: inline-block;color: #352b7d;border-radius: 4px;">' + noticeList[i].NoticeTitle + '</h3><span class=" badge badge-warning" style="float:right;margin-top: 9px;width:25%">' + Posted_Date + '</span><div style="clear:both"></div>';
+
+                            typeElement += '<button type="button" id="myBtn" class="btn btn-orange" style="width: 44%;padding:0px;background: #00c851 !important;" onclick="popup( ' + noticeList[i].NoticeId + ')">Read</button><p class="text-right"  style="float: right;display:inline-block"><span class="badge badge-warning" >' + noticeList[i].PostedBy + '</span></p><div style="clear:both"></div>';
+
+                            typeElement += '';
+
+                            //typeElement += ' <button type="button" style="padding:2px;" rel="tooltip" onclick="Check(' + 5 + ')" class="btn">eer</button>'
+                            //typeElement += '<p style="margin-bottom: 5px !important;background: #d8e0ff;padding: 4px;border-radius: 4px;color: #5414df;text-align: justify;">' + noticeList[i].NoticeDescription + '</p>';
+                                                        
+
+
+                            var o_notice = document.createElement('div');
+                            o_notice.classList.add("notice");
+                            o_notice.innerHTML = typeElement;
+                            document.getElementById('o_all_notice').append(o_notice);
+                        }
+                        else if (noticeList[i].Type == 'faculty') {
+
+                            typeElement += '<h3  style="margin: 7px 0 7px 0; font-size: 18px;width: 62%;display: inline-block;color: #352b7d;border-radius: 4px;">' + noticeList[i].NoticeTitle + '</h3><span class=" badge badge-warning" style="float:right;margin-top: 9px;width:25%">' + Posted_Date + '</span><div style="clear:both"></div>';
+
+                            typeElement += '<button type="button" id="myBtn" class="btn btn-orange"  style="width: 44%;padding:0px;background: #00c851 !important;" onclick="popup(' + noticeList[i].NoticeId + ')">Read</button><p class="text-right" style="float: right;display:inline-block"><span class="badge badge-warning" >' + noticeList[i].PostedBy + '</span></p><div style="clear:both"></div>';
+
+                            typeElement += '';
+
+
+                            //typeElement += '<p style="margin-bottom: 5px !important;background: #d8e0ff;padding: 4px;border-radius: 4px;color: #5414df;text-align: justify;">' + noticeList[i].NoticeDescription + '</p>';
+
+
+                            var o_notice = document.createElement('div');
+                            o_notice.classList.add("notice");
+                            o_notice.innerHTML = typeElement;
+                            document.getElementById('f_all_notice').append(o_notice);
+                        }
+                        else { }
+
+
+
+                    }
+                },
+                error: function (r) {
+                    console.log(r.d);
+                }
+            });
+
+           
+
+
+
+        });
+
+
+
+        function popup(id) {
+            var Notice_ID = id;
+
+            $.ajax({
+                type: "POST",
+                url: "StudentHome.aspx/GetNoticeDetails",
+                data: "{'notice':'" + Notice_ID + "'}",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (r) {
+                    var api = JSON.parse(r.d);
+                    //console.log(api);
+
+                   
+ 
+
+                    var noticeList = [];
+
+
+                    for (var i = 0; i < api.length; i++) {
+
+                        var RN = {
+                            NoticeId: api[i].NoticeId,
+                            NoticeTitle: api[i].NoticeTitle,
+                            NoticeDescription: api[i].NoticeDescription,
+                            FilePath: api[i].FilePath,
+                            PostedBy: api[i].PostedBy,
+                            PostedDate: api[i].PostedDate,
+                            WithdrawDate: api[i].WithdrawDate,
+                            CreatedDate: api[i].CreatedDate
+
+
+                        };
+
+
+
+                        noticeList.push(RN);
+                    }
+
+
+
+                   
+                    document.getElementById('model_head').innerHTML = api[0].NoticeTitle;
+
+
+                    document.getElementById('model_body').innerHTML = api[0].NoticeDescription;
+
+
+
+
+                   
+                    var modal = document.getElementById("myModal");
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtn");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    modal.style.display = "block";
+
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+
+
+                },
+                error: function (r) {
+                    console.log(r.d);
+                }
+            });
+        }
+
+
+
+    </script>
+
+<link rel="Stylesheet" href="../Bootstrap/css/bootstrap.css" />
+    <script type="text/javascript" src="../Bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Bootstrap/js/popper.min.js"></script>
+    
+
+    <script type="text/javascript" src="../Bootstrap/js/bootstrap.js" ></script>
+    
+      
+
+    <link href="../ContentCSS/CSS/SiteMaster.CSS" rel="stylesheet" />
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .navbar-toggle .icon-bar {
+            display: block;
+            width: 22px;
+            background: 1px #ee531c;
+            height: 2px;
+            border-radius: 1px;
+        }
+
+
+         @media screen and (max-width: 767px) {
+            #ctl00_menuMain {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body  id="MasterBody">
+
+
+
+    
+    <form name="aspnetForm" method="post" action="./StudentHome.aspx" id="aspnetForm">
+<input type="hidden" name="ctl00_ToolkitScriptManager1_HiddenField" id="ctl00_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/ScriptResource.axd?d=RQHUZ0t7usXTWHnn6gbNrPNnqgXkCEOh_ULIS5UslqifmTOJjGfVgN30a2Pa-bTln8jvxoCtq3AtkjwTP8fjhNNYt-N5r8kJJfaVf4_iueOejclcE3XRyP2eTItm6Y4pG0BvqBvPQBRbNNGqBe7uKQ2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=xAHLDieoMPLnb2gdGbquf32tW9TZcJQrRGDnOxlLEVfjHIZ-rqT4xOZUrmw3pe-YBGBa96UcC1oJUp7fv8r5DfiPYDKxrlLKOQwq4qkyLED91JiQLHtjsIEJYlJd-jJs0&amp;t=7a2ecbb7" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D5DC6374" />
+        
+        
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-lg-12" style="padding:0">
+                    <div class="Header-Container">
+                        <div class="Banner-Container">
+                            <div class="floatLeft">
+                                <img alt="Image" src='/Images/BannerLogo.gif' />
+                            </div>
+                            <div class="floatRight loginStatusPanel">
+                                <div style="border: 0px solid; display: inline-block;">
+                                    <div>
+                                        <label class="semesterStatusLabel">Current→</label>
+                                        <span id="ctl00_lblCurrent" class="semesterStatus">253 - Fall 2025 (Semester), 252 - Summer 2025 (Trimester)</span>
+                                    </div>
+                                    <div>
+                                        <label class="semesterStatusLabel">Registration→</label>
+                                        <span id="ctl00_lblRegistration" class="semesterStatus">253 - Fall 2025 (Semester), 253 - Fall 2025 (Trimester)</span>
+                                    </div>
+                                </div>
+                                <div class="StatusPanel">
+                                    <a id="ctl00_lbtnUserName" class="loginStyle" href="javascript:__doPostBack(&#39;ctl00$lbtnUserName&#39;,&#39;&#39;)">011222177</a>
+                                    <span id="ctl00_lblSeparate">/</span>
+                                    <a id="ctl00_lblLogout" class="logoutStyle" href="javascript:__doPostBack(&#39;ctl00$lblLogout&#39;,&#39;&#39;)">Logout</a>
+                                </div>
+                            </div>
+                            <div class="cleaner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="" style="padding:0">
+                    <div class="navMenu">
+                        <div id="navbar" class="navbar">
+                            <div  class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" style="border:2px solid #f3a401" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span> 
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <ul class="staticHome">
+                                        <li>
+                                            <a href="StudentHome.aspx" id="ctl00_A1">Home</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="staticHome">
+                                        <li>
+                                            <a href="UserRequestForIQAC.aspx" id="ctl00_lbtnIQAC">IQAC</a>  
+                                        </li>
+                                    </ul>
+                                    <ul class="staticHome">
+                                        <li>
+                                            <a href="UserRequestForOBE.aspx" id="ctl00_lblOBE">OBE</a>  
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <a href="#ctl00_menuMain_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=dLZOcu4SO9J0lG3QIXX_A_fg4qzIurX5netz3Y18KrlQXzO_NOVJVLYoUFhklr1d45wBvGMNC5_kRyzVFHnsQZpJxc5QbwyAbA05seKx6bU1&amp;t=638901752248157332" width="0" height="0" border="0" /></a><div id="ctl00_menuMain">
+	<ul class="level1 nav navbar-nav">
+		<li><a class="level1" href="../Bill/BillHome.aspx?mmi=40575a1742565b504e63">Student Accounts</a></li><li><a class="level1" href="../Student/TransportSurvey.aspx?mmi=40515a1e42505b594e63">Transport Registration</a></li><li><a class="level1" href="../COE/COEHome.aspx?mmi=40505d1642515c514e63">COE</a></li><li><a class="level1" href="../Admin/AdminHome.aspx?mmi=42546d1f61444d494e63">Admin Control</a></li><li><a class="level1" href="../Registration/RegistrationHome.aspx?mmi=40545a1642555b514e63">Registration</a></li><li><a class="level1" href="../GradeSheetAdmin/GradeSheetHome.aspx?mmi=415d552c795d4d494e63">Result</a></li>
+	</ul>
+</div><a id="ctl00_menuMain_SkipLink"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="">
+                    <div class="container-fluid">
+                        
+
+
+    <div class="Main-Hotline-container" style="display: none">
+
+        <div>
+
+            <div style="padding: 10px">
+
+
+                <br />
+                <br />
+                Technical Support : Phone: 01792416443;  Email : <a href="mailto:edusoft.uiu@gmail.com">edusoft.uiu@gmail.com</a><br />
+                <br />
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12" style="margin-top: 30px">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 col-sm-12">
+                        <div class="panel panel-default  bg-c-yellow update-card">
+                            <div class="panel-body card-block">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h6 class="text-white">Transcript CGPA: <span class="badge badge-light b_width" style="float: right; background: transparent !important; font-size: 15px">
+                                        <span id="ctl00_MainContainer_Status_CGPA">2.69</span></span></h6>
+                                    <h6 class="text-white">Completed Credit: <span class="badge badge-light b_width" style="float: right; background: transparent !important; font-size: 15px">
+                                        <span id="ctl00_MainContainer_Status_CompletedCr">94</span></span></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 col-sm-12">
+                        <div class="panel panel-default  bg-c-green update-card">
+                            <div class="panel-body card-block">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h6 class="text-white" style="display: none">Total Bill: <span class="badge badge-light b_width" style="float: right; background: transparent !important; font-size: 15px">
+                                        <span id="ctl00_MainContainer_FI_TotalBilled">544756 Tk.</span></span></h6>
+                                    <h6 class="text-white">Current Balance: <span class="badge badge-light b_width" style="float: right; background: transparent !important; font-size: 15px">
+                                        <span id="ctl00_MainContainer_FI_CurrentBalance">0 Tk.</span></span></h6>
+
+                                    <h6 class="text-white">Negative(-) balance means advance payment</h6>
+
+
+                                    <h6 class="text-white" style="display: none">Total Waived: <span class="badge badge-light b_width" style="float: right; background: transparent !important; font-size: 15px">
+                                        <span id="ctl00_MainContainer_FI_TotalWaved">23750 Tk.</span></span></h6>
+
+                                    <h6 class="text-white" style="display: none">Paid Paid:  <span class="badge badge-light b_width" style="float: right; background: transparent !important; font-size: 15px">
+                                        <span id="ctl00_MainContainer_FI_TotalPaid">544756 Tk.</span></span></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 col-sm-12">
+                        <div class="panel panel-default  bg-c-pink update-card">
+                            <div class="panel-body card-block">
+                                <div class="row">
+                                    <div class="col-md-7 col-sm-7 col-xs-7">
+                                        <h5 class="text-white">For online payment</h5>
+                                    </div>
+                                    <div class="col-md-5 col-sm-5 col-xs-5">
+                                        <input type="image" name="ctl00$MainContainer$imgBtnOnlinePayment" id="ctl00_MainContainer_imgBtnOnlinePayment" src="../Images/click_me.png" border="0" style="width: 100%; height: 56px;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-8 col-lg-8">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="badge badge-success">Important Announcement </span>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="panel panel-default pp" style="padding: 20px 15px 10px 15px; overflow-y: scroll; max-height: 231px">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <span id="ctl00_MainContainer_lblMessage1"><div style="text-align: center;"><font size="3" color="#000000"><b><u>Course Advising - Fall 2025 Trimester</u></b></font></div><div style="text-align: center;"><font size="3" color="#000033"><b style="">BSBGE Program: 30 Oct - 05 Nov, 2025</b></font></div></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <a style="color: gray; font-size: large; text-align: center; text-decoration: none;" href="http://ucam.uiu.ac.bd/Student/ExamRoutineViewer.aspx" target="_blank">
+                                                                <span style="color: black;">
+                                                                    <span id="ctl00_MainContainer_lblMessage2"><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="4"><a href="http://ucam.uiu.ac.bd/Student/ExamRoutineViewer.aspx"># Carefully consider the tentative routine of Mid & Final examination of  Fall 2025 trimester while choosing the courses.</a></font><br></div></span>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="badge badge-success">Notice </span>
+                                    </div>
+                                    <div class="panel-body" style="padding-top: 0px !important;">
+                                        <ul class="nav nav-tabs tbs" style="margin-top: 7px;">
+                                            <li class="active"><a data-toggle="tab" href="#Faculty">Faculty</a></li>
+                                            <li><a data-toggle="tab" href="#Others">Others</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div id="Faculty" class="tab-pane fade in active">
+                                                <div id="f_all_notice" style="height: 300px; overflow-y: scroll">
+                                                </div>
+                                            </div>
+                                            <div id="Others" class="tab-pane fade">
+                                                <div id="o_all_notice" style="height: 300px; overflow-y: scroll">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="modal" id="myModal">
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <div>
+                                                        <h4 class="modal-title" style="background: #ff3547 !important; color: #fff; width: 90%; float: left;" id="model_head"></h4>
+                                                        <div style="float: right; background: #3adef9; width: 17px; border-radius: 3px;"><span class="close" style="float: inherit">&times;</span></div>
+                                                        <div style="clear: both"></div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-body" id="">
+                                                    <p style="margin-bottom: 5px !important; background: #d8e0ff; padding: 4px; border-radius: 4px; color: #5414df; text-align: justify;" id="model_body"></p>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="badge badge-success">Class Routine</span>
+                                    </div>
+                                    <div class="panel-body" style="padding-bottom: 0; padding-top: 0">
+
+                                        <div class="table_scroll" style="margin-top: 5px; margin-bottom: 5px">
+
+                                            <table id="ctl00_MainContainer_Class_Schedule" class="table table-hover" border="0" width="100%" style="margin-bottom: 0px">
+	<tr>
+		<td class="white-text blue lighten-1" colspan="2">Saturday</td>
+	</tr><tr title="Microprocessors and Microcontrollers" class="hoverable ">
+		<td>CSE 4325 (E)</td><td class="text-right text-dark">01:51 PM-03:10 PM</td>
+	</tr><tr title="Operating Systems Laboratory" class="hoverable ">
+		<td>CSE 4510 (B)</td><td class="text-right text-dark">11:11 AM-01:40 PM</td>
+	</tr><tr>
+		<td class="white-text blue lighten-1" colspan="2">Sunday</td>
+	</tr><tr title="System Analysis and Design" class="hoverable ">
+		<td>CSE 3411 (J)</td><td class="text-right text-dark">01:51 PM-03:10 PM</td>
+	</tr><tr>
+		<td class="white-text blue lighten-1" colspan="2">Tuesday</td>
+	</tr><tr title="Microprocessors and Microcontrollers" class="hoverable ">
+		<td>CSE 4325 (E)</td><td class="text-right text-dark">01:51 PM-03:10 PM</td>
+	</tr><tr>
+		<td class="white-text blue lighten-1" colspan="2">Wednesday</td>
+	</tr><tr title="System Analysis and Design" class="hoverable ">
+		<td>CSE 3411 (J)</td><td class="text-right text-dark">01:51 PM-03:10 PM</td>
+	</tr>
+</table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="badge badge-success">Profile </span>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="col-md-4 col-lg-4 col-sm-4 bg-c-lite-green proff user-profile">
+                                            <div class="card-block text-center text-white">
+                                                <div class="m-b-25">
+                                                    <img id="ctl00_MainContainer_SI_Image" class="img-radius" src="../Upload/Avatar/Student/6102a8f7-2d04-4660-af85-dbff1cde72eb.jpg" width="100" border="0" />
+                                                </div>
+                                                <h6 class="f-w-600"><span class="badge badge-light" style="background: transparent !important; color: white !important;">
+                                                    <span id="ctl00_MainContainer_SI_Name">Easmin Akter Tule</span></span></h6>
+                                                <h6 class="f-w-600"><span class="badge badge-light" style="width: 107px; color: white !important; background: transparent !important;">
+                                                    <span id="ctl00_MainContainer_Label1">011222177</span></span></h6>
+                                                <input type="hidden" name="ctl00$MainContainer$hdnProgramId" id="ctl00_MainContainer_hdnProgramId" value="1" />
+                                                <h6 class="f-w-600" style="display: none">Blood Group: <span class="badge badge-light">
+                                                    <span id="ctl00_MainContainer_SI_BloodGroup">B+</span></span></h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 col-lg-8 col-sm-8">
+                                            <div class="card-block">
+                                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6 col-lg-6">
+                                                        <p class="m-b-10 f-w-600">DOB</p>
+                                                        <h6 class="text-muted f-w-400"><span class="badge badge-light">
+                                                            <span id="ctl00_MainContainer_SI_DOB">26 November, 2003</span></span></h6>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-lg-6">
+                                                        <p class="m-b-10 f-w-600">Phone</p>
+                                                        <h6 class="text-muted f-w-400"><span class="badge badge-light">
+                                                            <span id="ctl00_MainContainer_SI_Phone">+8801992185554</span></span></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6 col-lg-6">
+                                                        <p class="m-b-10 f-w-600">Mother's Name</p>
+                                                        <h6 class="text-muted f-w-400"><span class="badge badge-light">
+                                                            <span id="ctl00_MainContainer_SI_MotherName">Nurjahan Begum</span></span></h6>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-lg-6">
+                                                        <p class="m-b-10 f-w-600">Father's Name</p>
+                                                        <h6 class="text-muted f-w-400"><span class="badge badge-light">
+                                                            <span id="ctl00_MainContainer_SI_FatherName">Md. Amber Ali</span></span></h6>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="row">
+
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="badge badge-success">Advisor Information</span>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="panel panel-default pp" id="advisor" style="padding: 20px 15px 10px 15px">
+                                            <div class="row">'
+                                    <div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Advisor Name</div></div>
+                                    <div class="col-md-6"><span class="h5 badge badge-light"><span id="ctl00_MainContainer_lblAdvisorName">Md. Tarek Hasan</span></span></div>
+                                </div>
+                                <div class="row">
+                               <div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Advisor Initial</div></div>
+                               <div class="col-md-6"><span class="h5 badge badge-light"><span id="ctl00_MainContainer_lblAdvisorInitial">MdTH</span></span></div>
+                               </div>
+                                <div class="row">
+                                    <div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Room No</div></div>
+                                     <div class="col-md-6"><span class="h5 badge badge-light"><span id="ctl00_MainContainer_lblAdvisorRoom">319 A</span></span></div>
+                                 </div>
+                                <div class="row">
+                               <div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Email Address</div></div>
+                                <div class="col-md-6"><span class="h5 badge badge-light"><span id="ctl00_MainContainer_lblAdvisorEmail">tarek@cse.uiu.ac.bd</span></span></div>
+                               </div>
+                                  <div class="row">
+                                     <div class="col-md-5"><div class="h5 indigo-text mb-1 w-100">Contact Number</div></div>
+                                     <div class="col-md-6"><span class="h5 badge badge-light"><span id="ctl00_MainContainer_lblAdvisorPhone">+8801772888601</span></span></div>
+                                  </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="badge badge-success">Attendance Summary </span>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="panel panel-default pp" style="padding: 20px 15px 10px 15px">
+                                            <div class="d-none" id="attendancesummary_std" style="height: 230px"></div>
+                                        </div>
+
+                                        <table id="ctl00_MainContainer_Attendance_Today" class=" table table-striped" border="0" style="display: none; height: 230px">
+
+</table>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="badge badge-success">Result Summary </span>
+                                    </div>
+                                    <div class="panel-body" style="padding-bottom: 0;">
+                                        <div class="panel panel-default " style="padding: 20px 15px 0px 15px; margin-bottom: 10px;">
+                                            <div id="academicresult_std" style="height: 317px"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+               
+                <div class="footer">
+                    <div>
+                        Powered by <b>Edusoft Consultants Ltd</b><br />
+                        Copyright &copy; 2013 - <span id="ctl00_lblCurrentYear">2025</span> Edusoft Consultants Ltd. All rights reserved.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ctl00_ToolkitScriptManager1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+<script type='text/javascript'>new Sys.WebForms.Menu({ element: 'ctl00_menuMain', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script></form>
+
+
+
+
+
+   
+
+
+
+     <script type="text/javascript">
+         $(function () {
+             //to fix collapse mode width issue
+             $(".nav li,.nav li a,.nav li ul").removeAttr('style');
+             //for dropdown menu
+             $(".dropdown-menu").parent().removeClass().addClass('dropdown');
+             $(".dropdown>a").removeClass().addClass('dropdown-toggle').append('<b class="caret"></b>').attr('data-toggle', 'dropdown');
+             //remove default click redirect effect           
+             $('.dropdown-toggle').attr('onclick', '').off('click');
+         });
+
+         //Toastr
+         function ToastrWarning(msg, title) {
+             toastr.options = {
+                 "closeButton": false,
+                 "debug": false,
+                 "newestOnTop": false,
+                 "progressBar": true,
+                 "positionClass": "toast-middle-center",
+                 "preventDuplicates": true,
+                 "onclick": null,
+                 "showDuration": "1000",
+                 "hideDuration": "1000",
+                 "timeOut": "5000",
+                 "extendedTimeOut": "1000",
+                 "showEasing": "swing",
+                 "hideEasing": "linear",
+                 "showMethod": "fadeIn",
+                 "hideMethod": "fadeOut"
+             }
+             // toastr['success'](msg, title);
+             var d = Date();
+             toastr.warning(msg, title);
+             return false;
+         }
+
+         function ToastrSuccess(msg, title) {
+             toastr.options = {
+                 "closeButton": false,
+                 "debug": false,
+                 "newestOnTop": false,
+                 "progressBar": true,
+                 "positionClass": "toast-middle-center",
+                 "preventDuplicates": true,
+                 "onclick": null,
+                 "showDuration": "1000",
+                 "hideDuration": "1000",
+                 "timeOut": "5000",
+                 "extendedTimeOut": "1000",
+                 "showEasing": "swing",
+                 "hideEasing": "linear",
+                 "showMethod": "fadeIn",
+                 "hideMethod": "fadeOut"
+             }
+             // toastr['success'](msg, title);
+             var d = Date();
+             toastr.success(msg, title);
+             return false;
+         }
+
+         function ToastrError(msg, title) {
+             toastr.options = {
+                 "closeButton": false,
+                 "debug": false,
+                 "newestOnTop": false,
+                 "progressBar": true,
+                 "positionClass": "toast-middle-center",
+                 "preventDuplicates": true,
+                 "onclick": null,
+                 "showDuration": "1000",
+                 "hideDuration": "1000",
+                 "timeOut": "5000",
+                 "extendedTimeOut": "1000",
+                 "showEasing": "swing",
+                 "hideEasing": "linear",
+                 "showMethod": "fadeIn",
+                 "hideMethod": "fadeOut"
+             }
+             // toastr['success'](msg, title);
+             var d = Date();
+             toastr.error(msg, title);
+             return false;
+         }
+
+    </script>
+
+</body>
+</html>
+
